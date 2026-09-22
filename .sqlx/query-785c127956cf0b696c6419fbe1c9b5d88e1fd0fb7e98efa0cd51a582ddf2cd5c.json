@@ -1,0 +1,28 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "SELECT url FROM slugs WHERE slug = $1",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "url",
+        "type_info": "Text",
+        "origin": {
+          "Table": {
+            "table": "slugs",
+            "name": "url"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Text"
+      ]
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "785c127956cf0b696c6419fbe1c9b5d88e1fd0fb7e98efa0cd51a582ddf2cd5c"
+}

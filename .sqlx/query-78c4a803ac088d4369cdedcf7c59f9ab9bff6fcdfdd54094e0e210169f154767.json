@@ -1,0 +1,14 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "DELETE FROM slugs WHERE slug = $1",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Text"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "78c4a803ac088d4369cdedcf7c59f9ab9bff6fcdfdd54094e0e210169f154767"
+}
