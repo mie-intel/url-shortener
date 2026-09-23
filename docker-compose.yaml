@@ -15,16 +15,16 @@ services:
       interval: 5s
       timeout: 5s
       retries: 5
-  be:
-    build: .
-    restart: unless-stopped
-    depends_on:
-      db:
-        condition: service_healthy
-    ports:
-      - "8686:8686"
-    env_file:
-      - .env
+  # be:
+  #   build: .
+  #   restart: unless-stopped
+  #   depends_on:
+  #     db:
+  #       condition: service_healthy
+  #   ports:
+  #     - "8686:8686"
+  #   env_file:
+  #     - .env
 
 volumes:
   pgdata:

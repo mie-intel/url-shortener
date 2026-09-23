@@ -1,3 +1,4 @@
+use crate::auth::AuthUser;
 use crate::state::AppState;
 use axum::extract::State;
 use axum::{
@@ -15,6 +16,7 @@ pub struct CreateSlug {
 }
 
 pub async fn create(
+    _user: AuthUser,
     State(state): State<AppState>,
     Json(input): Json<CreateSlug>,
 ) -> Result<impl IntoResponse, Response> {

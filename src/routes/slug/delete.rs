@@ -1,3 +1,4 @@
+use crate::auth::AuthUser;
 use crate::state::AppState;
 use axum::extract::{Path, State};
 use axum::{
@@ -8,6 +9,7 @@ use axum::{
 use sqlx;
 
 pub async fn delete(
+    _user: AuthUser,
     State(state): State<AppState>,
     Path(id): Path<String>,
 ) -> Result<impl IntoResponse, Response> {
